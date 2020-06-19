@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>html页面</h1>
+        <script>
+            var n;
+            console.log(typeof n); // "undefined"
+
+            n = 1;
+            console.log(typeof n); // "number"
+
+            n = "1";
+            console.log(typeof n); // "string"
+
+            n = false;
+            console.log(typeof n); // "boolean"
+
+            n = { name: "obj" };
+            console.log(typeof n); // "object"
+
+            n = new Number(5);
+            console.log(typeof n); // "object"
+
+            n = function() { return; };
+            console.log(typeof n); // "function"
+        </script>
+    </body>
+</html>
