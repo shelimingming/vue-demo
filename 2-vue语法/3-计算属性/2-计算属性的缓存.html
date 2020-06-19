@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h2>{{total}}</h2>
+    <h2>{{total}}</h2>
+    <h2>{{total}}</h2>
+
+    <h2>----------</h2>
+
+    <h2>{{getTotal()}}</h2>
+    <h2>{{getTotal()}}</h2>
+    <h2>{{getTotal()}}</h2>
+</div>
+</body>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            price: 100,
+            count: 3,
+        },
+        computed: {
+            total() {
+                console.log("计算属性")
+                return this.price * this.count;
+            }
+        },
+        methods: {
+            getTotal() {
+                console.log("方法")
+                return this.price * this.count;
+            }
+        }
+    })
+</script>
+</html>

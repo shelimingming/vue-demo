@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="fun1()">fun1()</button>
+    <button v-on:click="fun1">fun1</button>
+    <br/>
+    <button v-on:click="fun2()">fun2()</button>
+    <button v-on:click="fun2">fun2</button>
+    <br/>
+    <button v-on:click="fun3('abc', $event)">fun3('abc', $event)</button>
+</div>
+</body>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            count: 0
+        },
+        methods: {
+            fun1() {
+                console.log("fun1")
+            },
+            fun2(event) {
+                console.log("fun2:" + event)
+            },
+            fun3(s, event) {
+                console.log("fun3:" + s + event)
+            }
+        }
+    })
+</script>
+</html>
