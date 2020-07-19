@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
 
 <body>
     <div id="app">
-        <h2>{{url}}</h2>
-        <h2 v-html="url"></h2>
+        <input type="text" v-model="message">
+        {{message}}
     </div>
 </body>
+
+<script src="../js/vue.js"></script>
 <script>
     const app = new Vue({
-        el: "#app",
+        el: '#app',
         data: {
-            url: '<a href="http://www.baidu.com">百度一下</a>'
+            message: '你好啊'
         }
     })
 </script>

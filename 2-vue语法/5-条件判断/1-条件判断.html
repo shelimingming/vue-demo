@@ -9,15 +9,16 @@
 
 <body>
     <div id="app">
-        <h2>{{url}}</h2>
-        <h2 v-html="url"></h2>
+        <p v-if="age < 18">儿童</p>
+        <p v-else-if="age < 60">成人</p>
+        <p v-else>老人</p>
     </div>
 </body>
 <script>
     const app = new Vue({
         el: "#app",
         data: {
-            url: '<a href="http://www.baidu.com">百度一下</a>'
+            age: 18
         }
     })
 </script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+</body>
+<script>
+    var name = "zhangsan";
+    var age = 18;
+
+    // ES6之前的语法
+    var obj1 = {
+        name: name,
+        age: age,
+        hello: function () {
+            return "hello " + name;
+        }
+    }
+
+    //ES6的语法
+    var obj2 = {
+        name,
+        age,
+        hello() {
+            return "hello " + name;
+        }
+    }
+</script>
+
+</html>

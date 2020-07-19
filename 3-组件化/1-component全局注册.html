@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
-<div id="app">
-    <button-counter></button-counter>
-</div>
+    <div id="app">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
 </body>
 <script>
     // 定义一个名为 button-counter 的新组件
@@ -20,8 +24,10 @@
         },
         template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
     })
+
     const app = new Vue({
         el: "#app",
     })
 </script>
+
 </html>

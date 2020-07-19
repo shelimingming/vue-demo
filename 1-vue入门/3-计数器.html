@@ -9,15 +9,9 @@
 
 <body>
     <div id="app">
-        <h2>{{count}}</h2>
-
-        <button v-on:click="count++">+</button>
-        <button v-on:click="decrement">-</button>
-        <br />
-
-        <!--语法糖的写法-->
-        <button @click="count++">+</button>
-        <button @click="decrement">-</button>
+        <h3>个数：{{count}}</h3>
+        <button v-on:click="increment">++</button>
+        <button v-on:click="decrement">--</button>
     </div>
 </body>
 <script>
@@ -27,10 +21,13 @@
             count: 0
         },
         methods: {
-            decrement() {
+            increment: function () {
+                this.count++;
+            },
+            decrement: function () {
                 this.count--;
             }
-        }
+        },
     })
 </script>
 

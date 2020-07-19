@@ -9,15 +9,22 @@
 
 <body>
     <div id="app">
-        <h2>{{url}}</h2>
-        <h2 v-html="url"></h2>
+        <ul>
+            <li v-for="(value,key,index) in person">{{index}}. {{key}} :{{value}} </li>
+        </ul>
     </div>
 </body>
 <script>
     const app = new Vue({
         el: "#app",
         data: {
-            url: '<a href="http://www.baidu.com">百度一下</a>'
+            person: {
+                name: "sheliming",
+                age: 18,
+                hello: function () {
+                    return "hello " + name;
+                }
+            }
         }
     })
 </script>

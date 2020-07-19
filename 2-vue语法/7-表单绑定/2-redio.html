@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../../js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
-<div id="app">
-    <label for="male">
-        <input type="radio" id="male" value="男" v-model="sex">
-    </label>
-    <label for="female">
-        <input type="radio" id="female" value="女" v-model="sex">
-    </label>
-    <h2>你的性别：{{sex}}</h2>
-</div>
+    <div id="app">
+        <label for="male">
+            <input type="radio" id="male" value="男" v-model="sex">
+        </label>
+        <label for="female">
+            <input type="radio" id="female" value="女" v-model="sex">
+        </label>
+        <h2>你的性别：{{sex}}</h2>
+    </div>
 </body>
 
 <script src="../js/vue.js"></script>
@@ -26,4 +28,5 @@
         }
     })
 </script>
+
 </html>

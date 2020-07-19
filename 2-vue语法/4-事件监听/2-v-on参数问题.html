@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../../js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
-<div id="app">
-    <button v-on:click="fun1()">fun1()</button>
-    <button v-on:click="fun1">fun1</button>
-    <br/>
-    <button v-on:click="fun2()">fun2()</button>
-    <button v-on:click="fun2">fun2</button>
-    <br/>
-    <button v-on:click="fun3('abc', $event)">fun3('abc', $event)</button>
-</div>
+    <div id="app">
+        <button v-on:click="fun1()">fun1()</button>
+        <button v-on:click="fun1">fun1</button>
+        <br />
+        <button v-on:click="fun2()">fun2()</button>
+        <button v-on:click="fun2">fun2</button>
+        <br />
+        <button v-on:click="fun3('abc', $event)">fun3('abc', $event)</button>
+    </div>
 </body>
 <script>
     const app = new Vue({
@@ -35,4 +37,5 @@
         }
     })
 </script>
+
 </html>

@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../../js/vue.js"></script>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 <body>
-<div id="app">
-    <label for="agree">
-        <input type="checkbox" id="agree" v-model="isAgree">
-    </label>
-    <h2>你是否同意：{{isAgree}}</h2>
+    <div id="app">
+        <label for="agree">
+            <input type="checkbox" id="agree" v-model="isAgree">
+        </label>
+        <h2>你是否同意：{{isAgree}}</h2>
 
-    <br/>
+        <br />
 
-    <input type="checkbox" value="篮球" v-model="hobbies">篮球
-    <input type="checkbox" value="足球" v-model="hobbies">足球
-    <input type="checkbox" value="乒乓球" v-model="hobbies">乒乓球
-    <input type="checkbox" value="羽毛球" v-model="hobbies">羽毛球
-    <h2>您的爱好是: {{hobbies}}</h2>
-</div>
+        <input type="checkbox" value="篮球" v-model="hobbies">篮球
+        <input type="checkbox" value="足球" v-model="hobbies">足球
+        <input type="checkbox" value="乒乓球" v-model="hobbies">乒乓球
+        <input type="checkbox" value="羽毛球" v-model="hobbies">羽毛球
+        <h2>您的爱好是: {{hobbies}}</h2>
+    </div>
 </body>
 
 <script src="../js/vue.js"></script>
@@ -28,8 +29,9 @@
         el: '#app',
         data: {
             isAgree: false,
-            hobbies:[]
+            hobbies: []
         }
     })
 </script>
+
 </html>

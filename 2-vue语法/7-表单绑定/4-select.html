@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../../js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-<body>
-<div id="app">
-    <!--1.单选-->
-    <select name="abc" v-model="sport">
-        <option value="篮球">篮球</option>
-        <option value="足球">足球</option>
-        <option value="羽毛球">羽毛球</option>
-    </select>
-    <h2>您选择的运动是: {{sport}}</h2>
 
-    <!--2.多选-->
-    <select name="abc" v-model="sports" multiple>
-        <option value="篮球">篮球</option>
-        <option value="足球">足球</option>
-        <option value="羽毛球">羽毛球</option>
-    </select>
-    <h2>您选择的运动是: {{sports}}</h2>
-</div>
+<body>
+    <div id="app">
+        <!--1.单选-->
+        <select name="sport" v-model="sport">
+            <option value="篮球">篮球</option>
+            <option value="足球">足球</option>
+            <option value="羽毛球">羽毛球</option>
+        </select>
+        <h2>您选择的运动是: {{sport}}</h2>
+
+        <!--2.多选-->
+        <select name="sports" v-model="sports" multiple>
+            <option value="篮球">篮球</option>
+            <option value="足球">足球</option>
+            <option value="羽毛球">羽毛球</option>
+        </select>
+        <h2>您选择的运动是: {{sports}}</h2>
+    </div>
 </body>
 <script>
     const app = new Vue({
@@ -33,4 +35,5 @@
         }
     })
 </script>
+
 </html>
