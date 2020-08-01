@@ -11,14 +11,12 @@
     <div id="app">
         <button-counter></button-counter>
     </div>
-    <div id="app1">
-        <button-counter></button-counter>
-        <button-counter></button-counter>
-    </div>
-    <div id="app2">
-        <button-counter></button-counter>
-    </div>
 </body>
+
+<template id="button-counter">
+    <button v-on:click="count++">You clicked me {{ count }} times.</button>
+</template>
+
 <script>
     // 定义一个名为 button-counter 的新组件
     Vue.component('button-counter', {
@@ -33,7 +31,7 @@
     const app1 = new Vue({
         el: "#app1",
     })
-    
+
     const app2 = new Vue({
         el: "#app2",
     })

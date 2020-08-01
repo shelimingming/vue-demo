@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+</body>
+
+<template id='parent'>
+    <div>
+        <button @click="getAllChild">获取所有子组件</button>
+        <child1></child1>
+        <child2></child2>
+    </div>
+</template>
+
+<template id='child1'>
+    <h3>子组件1</h3>
+</template>
+
+<template id='child2'>
+    <h3>子组件2</h3>
+</template>
+
+<script>
+    const app = new Vue({
+        el: "#app",
+        components: {
+            'parent': {
+                template: '#parent',
+                components: {
+                    'child1': {
+                        template: '#child1'
+                    },
+                    'child2': {
+                        template: '#child2'
+                    }
+                },
+                methods: {
+                    getAllChild() {
+                        for (let i = 0; i < this.$children.length; i++) {
+                            console.log(this.$children[i]);
+                        }
+                    }
+                }
+            }
+        }
+    })
+</script>
+
+</html>

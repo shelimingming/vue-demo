@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <item prop1="手机" prop2=true prop6="aa"></item>
+    </div>
+</body>
+
+<template id='item'>
+    <h3>{{ prop4 }},{{ prop5 }}</h3>
+</template>
+
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            title: "默认商品"
+        },
+        components: {
+            'item': {
+                props: {
+                    // 基础类型检查
+                    prop1: Number,
+                    // 
+                    prop2: [Number, String],
+                    //
+                    prop3: {
+                        type: Number,
+                        required: true
+                    },
+                    //
+                    prop4: {
+                        type: Number,
+                        default: 8
+                    },
+                    //
+                    prop5: {
+                        type: Object,
+                        default: function () {
+                            return {
+                                name: "sheliming"
+                            }
+                        }
+                    },
+                    //
+                    prop6: {
+                        validator: function (value) {
+                            return value == "hello" ? true : false;
+                        }
+                    }
+                },
+                template: '#item'
+            }
+        }
+    })
+</script>
+
+</html>

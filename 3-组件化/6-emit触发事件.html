@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>购物车：{{ carts }}</p>
+        <item title="手机" @add="addToCarts"></item>
+        <item title="洗衣机" @add="addToCarts"></item>
+        <item :title="title" @add="addToCarts"></item>
+    </div>
+</body>
+
+<template id='item'>
+    <div>
+        <h3>{{ title }}</h3>
+        <button @click="add">加入购物车</button>
+    </div>
+</template>
+
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            title: "默认商品",
+            carts: ""
+        },
+        components: {
+            'item': {
+                props: ['title'],
+                template: '#item',
+                methods: {
+                    add() {
+                        this.$emit("add", this.title)
+                    }
+                },
+            }
+        },
+        methods: {
+            addToCarts(item) {
+                this.carts += (item+",");
+            }
+        },
+    })
+</script>
+
+</html>
